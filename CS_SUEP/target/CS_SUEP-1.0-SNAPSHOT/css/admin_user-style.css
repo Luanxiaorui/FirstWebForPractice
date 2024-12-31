@@ -1,0 +1,96 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器设置 */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #1abc9c;
+    border-radius: 5px;
+}
+
+/* 主内容区域样式 */
+.main-content {
+    margin-left: 250px; /* 为了让内容不被侧边栏覆盖 */
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.main-content h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* 页面中组件的样式 */
+.main-content .section {
+    margin-bottom: 30px;
+}
+
+/* 响应式设计 - 当屏幕宽度小于768px时 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
